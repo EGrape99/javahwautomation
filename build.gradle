@@ -2,7 +2,11 @@ plugins {
     id 'java'
 }
 
-group = 'ru.netology'
+sourceCompatibility = 11
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+group = 'ru.netologe'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,11 +14,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'junit:junit:4.13.1'
 }
-
 test {
-    useJUnitPlatform()
+    useJUnit()
 }
